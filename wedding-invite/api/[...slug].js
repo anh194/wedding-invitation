@@ -15,15 +15,18 @@ export default async function handler(req, res) {
     // Get the backend URL from environment variable
     const backendUrl = process.env.BACKEND_URL || 'http://localhost:3001';
     
-    // Get the path from the request URL
+    // Get the path from the request URL and clean it
     const requestPath = req.url.replace('/api/', '');
-    const apiPath = requestPath || '';
+    // Remove query parameters (everything after ?)
+    const cleanPath = requestPath.split('?')[0];
+    const apiPath = cleanPath || '';
     
     // Construct the full backend URL
     const fullBackendUrl = `${backendUrl}/${apiPath}`;
     
     console.log(`🔍 Catch-all function:`);
     console.log(`- Request URL: ${req.url}`);
+    console.log(`- Clean Path: ${cleanPath}`);
     console.log(`- API Path: ${apiPath}`);
     console.log(`- Backend URL: ${fullBackendUrl}`);
     
