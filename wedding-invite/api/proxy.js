@@ -16,12 +16,11 @@ export default async function handler(req, res) {
     const backendUrl = process.env.BACKEND_URL || 'http://localhost:3001';
     console.log("Backend URL:", backendUrl);
     
-    // Get the path from the request
-    const { path } = req.query;
-    const apiPath = Array.isArray(path) ? path.join('/') : path || '';
+    // Get the path from the request URL instead of query params
+    const requestPath = req.url.replace('/api/', '');
+    const apiPath = requestPath || '';
     
     // Construct the full backend URL
-    // Remove the 'api' prefix since our backend doesn't use it
     const fullBackendUrl = `${backendUrl}/${apiPath}`;
     
     console.log(`🔍 Debug Info:`);
