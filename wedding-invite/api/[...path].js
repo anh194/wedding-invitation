@@ -20,7 +20,8 @@ export default async function handler(req, res) {
     const apiPath = Array.isArray(path) ? path.join('/') : path || '';
     
     // Construct the full backend URL
-    const fullBackendUrl = `${backendUrl}/api/${apiPath}`;
+    // Remove the 'api' prefix since our backend doesn't use it
+    const fullBackendUrl = `${backendUrl}/${apiPath}`;
     
     console.log(`Proxying request to: ${fullBackendUrl}`);
     
