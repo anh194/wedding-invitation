@@ -24,6 +24,12 @@ export default async function handler(req, res) {
     // Remove the 'api' prefix since our backend doesn't use it
     const fullBackendUrl = `${backendUrl}/${apiPath}`;
     
+    console.log(`🔍 Debug Info:`);
+    console.log(`- Original path: ${req.url}`);
+    console.log(`- Query path: ${JSON.stringify(path)}`);
+    console.log(`- apiPath: "${apiPath}"`);
+    console.log(`- backendUrl: ${backendUrl}`);
+    console.log(`- fullBackendUrl: ${fullBackendUrl}`);
     console.log(`Proxying request to: ${fullBackendUrl}`);
     
     // Forward the request to your ECS backend
