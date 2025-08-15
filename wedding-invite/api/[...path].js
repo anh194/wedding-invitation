@@ -14,6 +14,7 @@ export default async function handler(req, res) {
   try {
     // Get the backend URL from environment variable
     const backendUrl = process.env.BACKEND_URL || 'http://localhost:3001';
+    console.log("Backend URL:", backendUrl);
     
     // Get the path from the request
     const { path } = req.query;
