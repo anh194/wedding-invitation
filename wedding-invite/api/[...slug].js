@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     const apiPath = cleanPath || '';
     
     // Construct the full backend URL
-    const fullBackendUrl = `${backendUrl}/${apiPath}`;
+    const fullBackendUrl = `${backendUrl}/api/${apiPath}`;
     
     console.log(`🔍 Catch-all function:`);
     console.log(`- Request URL: ${req.url}`);
