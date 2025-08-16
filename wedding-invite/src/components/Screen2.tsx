@@ -33,6 +33,8 @@ const Screen2: React.FC<Screen2Props> = ({ onNext, onBack }) => {
           onClick={handleMapClick}
           style={{
             cursor: 'pointer',
+            width: '8vw',
+            height: '14vh',
             maxWidth: '250px',
             maxHeight: '150px',
             transition: 'transform 0.2s ease',

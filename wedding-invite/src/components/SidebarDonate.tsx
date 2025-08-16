@@ -42,6 +42,8 @@ const SidebarDonate: React.FC = () => {
           alt="Donate"
           onClick={handleSidebarClick}
           style={{
+            width: '12vw',
+            height: '35vh',
             maxWidth: '200px',
             maxHeight: '600px',
             objectFit: 'contain',
@@ -65,6 +67,8 @@ const SidebarDonate: React.FC = () => {
           alt="Donation QR Code"
           onClick={handleSidebarClick}
           style={{
+            width: '25vw',
+            height: '25vw',
             maxWidth: '700px',
             maxHeight: '700px',
             objectFit: 'contain',
