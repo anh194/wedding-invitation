@@ -37,6 +37,8 @@ const Screen2: React.FC<Screen2Props> = ({ onNext, onBack }) => {
             height: '14vh',
             maxWidth: '250px',
             maxHeight: '150px',
+            minWidth: '120px',
+            minHeight: '80px',
             transition: 'transform 0.2s ease',
           }}
           onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
