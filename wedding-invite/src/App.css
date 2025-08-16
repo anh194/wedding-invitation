@@ -145,6 +145,21 @@
   z-index: 25;
 }
 
+/* Responsive positioning for Screen1 button */
+@media (max-width: 768px) {
+  .button-position-screen-1 {
+    top: 65%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-position-screen-1 {
+    top: 70%;
+    left: 50%;
+  }
+}
+
 .button-position-screen-2 {
   position: absolute;
   top: 66%;
