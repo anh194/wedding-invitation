@@ -26,20 +26,16 @@ const Screen5: React.FC<Screen5Props> = ({ onBack }) => {
       </button>
 
       {/* No kids image */}
-      <div style={{ 
-        position: 'absolute', 
-        bottom: '33%', 
-        left: '48.2%', 
-        transform: 'translateX(-50%)'
-      }}>
+      <div className="no-kids-image-container">
         <img 
           src="no_kids.png" 
           alt="No kids" 
-          style={{
-            maxWidth: '150px',
-            maxHeight: '150px',
-            objectFit: 'contain'
-          }}
+          // style={{
+          //   maxWidth: '150px',
+          //   maxHeight: '150px',
+          //   objectFit: 'contain'
+          // }}
+          className="no-kids-image"
         />
       </div>
 

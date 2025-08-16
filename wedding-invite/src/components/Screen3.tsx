@@ -38,57 +38,27 @@ const Screen3: React.FC<Screen3Props> = ({ onNext, onBack, formData, updateFormD
 
       {/* Floating error notification */}
       {showError && (
-        <div style={{
-          position: 'fixed',
-          top: '20px',
-          right: '20px',
-          backgroundColor: '#ffebee',
-          border: '2px solid #f44336',
-          borderRadius: '8px',
-          padding: '15px 20px',
-          color: '#d32f2f',
-          fontSize: '20px',
-          fontFamily: 'Pixellari, Courier New, monospace',
-          textAlign: 'center',
-          animation: 'fadeIn 0.5s ease-in',
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
-          zIndex: 1000,
-          maxWidth: '300px'
-        }}>
+        <div className="form-input-error">
           Please enter your name and select a team!
         </div>
       )}
 
-      {/* Form container positioned at 2/3 from top, horizontally centered */}
-      <div style={{ position: 'absolute', top: '46%', left: '49%', transform: 'translate(-50%, -50%)' }}>
+        {/* Form container positioned at 2/3 from top, horizontally centered */}
+        <div className="name-input-container">
         <div className="form-container">
           {/* Name input with custom background */}
           <input
-            type="text"
+            type="text" 
             placeholder="Enter your name"
             value={formData.name}
             onChange={(e) => updateFormData({ name: e.target.value })}
-            style={{
-              backgroundImage: 'url(name_box.png)',
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              border: 'none',
-              width: '900px',
-              height: '180px',
-              fontSize: '16px',
-              fontFamily: 'Pixellari, Courier New, monospace',
-              color: '#5a3b1e',
-              textAlign: 'center',
-              outline: 'none',
-              backgroundColor: 'transparent'
-            }}
+            className="name-input"
           />
 
           {/* Team selection */}
           <div className="button-group">
             <button
-              className={`wedding-button ${formData.team === 'BRIDE' ? 'selected' : ''}`}
+              className={`wedding-button bride-button ${formData.team === 'BRIDE' ? 'selected' : ''}`}
               onClick={() => updateFormData({ team: 'BRIDE' })}
               style={{
                 backgroundImage: 'url(button.png)'
@@ -97,7 +67,7 @@ const Screen3: React.FC<Screen3Props> = ({ onNext, onBack, formData, updateFormD
               Bride
             </button>
             <button
-              className={`wedding-button ${formData.team === 'GROOM' ? 'selected' : ''}`}
+              className={`wedding-button groom-button ${formData.team === 'GROOM' ? 'selected' : ''}`}
               onClick={() => updateFormData({ team: 'GROOM' })}
               style={{
                 backgroundImage: 'url(button.png)'
@@ -108,16 +78,26 @@ const Screen3: React.FC<Screen3Props> = ({ onNext, onBack, formData, updateFormD
           </div>
 
           {/* Next button */}
-          <button 
-            className="wedding-button" 
+          {/* <button 
+            className="wedding-button next-screen3-button" 
             onClick={handleNext}
             style={{
               backgroundImage: 'url(button.png)'
             }}
           >
             Next
-          </button>
+          </button> */}
         </div>
+
+        <button 
+            className="wedding-button next-screen3-button" 
+            onClick={handleNext}
+            style={{
+              backgroundImage: 'url(button.png)'
+            }}
+          >
+            Next
+        </button>
       </div>
     </div>
   );

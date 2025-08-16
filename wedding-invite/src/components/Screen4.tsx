@@ -61,12 +61,12 @@ const Screen4: React.FC<Screen4Props> = ({ onNext, onBack, formData, updateFormD
       )}
 
       {/* Form container positioned at center */}
-      <div style={{ position: 'absolute', top: '49%', left: '49%', transform: 'translate(-50%, -50%)' }}>
+      <div className="screen4-form">
         <div className="form-container">
           {/* Plus One selection */}
           <div className="button-group">
             <button
-              className={`wedding-button ${formData.plus_one ? 'selected' : ''}`}
+              className={`wedding-button plus-one-yes-button ${formData.plus_one ? 'selected' : ''}`}
               onClick={() => updateFormData({ plus_one: true })}
               style={{
                 backgroundImage: 'url(button.png)'
@@ -75,7 +75,7 @@ const Screen4: React.FC<Screen4Props> = ({ onNext, onBack, formData, updateFormD
               Yes
             </button>
             <button
-              className={`wedding-button ${!formData.plus_one ? 'selected' : ''}`}
+              className={`wedding-button plus-one-no-button ${!formData.plus_one ? 'selected' : ''}`}
               onClick={() => updateFormData({ plus_one: false })}
               style={{
                 backgroundImage: 'url(button.png)'
@@ -88,7 +88,7 @@ const Screen4: React.FC<Screen4Props> = ({ onNext, onBack, formData, updateFormD
           {/* After Party selection */}
           <div className="button-group">
             <button
-              className={`wedding-button ${formData.after_party ? 'selected' : ''}`}
+              className={`wedding-button after_party_yes-button ${formData.after_party ? 'selected' : ''}`}
               onClick={() => updateFormData({ after_party: true })}
               style={{
                 backgroundImage: 'url(button.png)'
@@ -97,7 +97,7 @@ const Screen4: React.FC<Screen4Props> = ({ onNext, onBack, formData, updateFormD
               Yes
             </button>
             <button
-              className={`wedding-button ${!formData.after_party ? 'selected' : ''}`}
+              className={`wedding-button after_party_no-button ${!formData.after_party ? 'selected' : ''}`}
               onClick={() => updateFormData({ after_party: false })}
               style={{
                 backgroundImage: 'url(button.png)'
@@ -106,18 +106,19 @@ const Screen4: React.FC<Screen4Props> = ({ onNext, onBack, formData, updateFormD
               No
             </button>
           </div>
-
-          {/* Submit button */}
-          <button 
-            className="wedding-button" 
-            onClick={handleSubmit}
-            style={{
-              backgroundImage: 'url(button.png)'
-            }}
-          >
-            Submit
-          </button>
         </div>
+      </div>
+      {/* Submit button */}
+      <div className="submit-container">
+      <button 
+        className="wedding-button" 
+        onClick={handleSubmit}
+        style={{
+          backgroundImage: 'url(button.png)'
+        }}
+      >
+          Submit
+        </button>
       </div>
     </div>
   );
