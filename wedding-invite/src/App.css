@@ -142,6 +142,7 @@
   top: 61.5%;
   left: 48.5%;
   transform: translate(-50%, -50%);
+  z-index: 25;
 }
 
 .button-position-screen-2 {
@@ -183,6 +184,7 @@
     font-family: 'Pixellari', 'Courier New', monospace;
     cursor: pointer;
     transition: all 0.1s ease;
+    z-index: 25;
   }
 
 .wedding-button:hover {

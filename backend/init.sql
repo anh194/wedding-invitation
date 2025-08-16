@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS guests (
     name VARCHAR(255) NOT NULL,
     team VARCHAR(10) NOT NULL CHECK (team IN ('BRIDE', 'GROOM')),
     plus_one BOOLEAN NOT NULL,
+    after_party BOOLEAN DEFAULT false,
     created TIMESTAMP DEFAULT NOW()
 );
 
