@@ -155,8 +155,48 @@
 
 @media (max-width: 480px) {
   .button-position-screen-1 {
-    top: 40%;
-    left: 50%;
+    top: 54%;
+    left: 47.5%;
+  }
+}
+
+.map-button-position {
+  position: absolute;
+  top: 50%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .map-button-position {
+    top: 49.5%;
+    left: 60.5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-button-position {
+    top: 49.5%;
+    left: 60.5%;
+  }
+}
+
+.map {
+  cursor: pointer;
+  width: 8vw;
+  height: 6vh;
+  max-width: 120px;
+  max-height: 90px;
+  min-width: 30px;
+  min-height: 10px;
+  transition: transform 0.2s ease;
+}
+
+
+@media (max-width: 480px) {
+  .map {
+    max-width: 600px;
+    max-height: 40px;
   }
 }
 
@@ -170,15 +210,15 @@
 /* Responsive positioning for Screen2 button */
 @media (max-width: 768px) {
   .button-position-screen-2 {
-    top: 70%;
-    left: 55%;
+    top: 55%;
+    left: 60.5%;
   }
 }
 
 @media (max-width: 480px) {
   .button-position-screen-2 {
-    top: 40%;
-    left: 50%;
+    top: 55%;
+    left: 60.5%;
   }
 }
 

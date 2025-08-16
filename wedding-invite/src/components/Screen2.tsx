@@ -26,21 +26,22 @@ const Screen2: React.FC<Screen2Props> = ({ onNext, onBack }) => {
       </button>
 
       {/* Clickable map image positioned at center */}
-      <div style={{ position: 'absolute', top: '50%', left: '58%', transform: 'translate(-50%, -50%)' }}>
+      <div className="map-button-position">
         <img 
           src="map.png" 
           alt="Map location" 
           onClick={handleMapClick}
-          style={{
-            cursor: 'pointer',
-            width: '8vw',
-            height: '14vh',
-            maxWidth: '250px',
-            maxHeight: '150px',
-            minWidth: '120px',
-            minHeight: '80px',
-            transition: 'transform 0.2s ease',
-          }}
+          // style={{
+          //   cursor: 'pointer',
+          //   width: '8vw',
+          //   height: '6vh',
+          //   maxWidth: '250px',
+          //   maxHeight: '150px',
+          //   minWidth: '30px',
+          //   minHeight: '10px',
+          //   transition: 'transform 0.2s ease',
+          // }}
+          className="map"
           onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
           onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
         />
