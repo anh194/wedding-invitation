@@ -613,8 +613,8 @@
 
 .no-kids-image {
   background-image: url('../public/no_kids.png');
-  width: 100px;
-  height: 100px;
+  width: 15vw;
+  height: 15vh;
   object-fit: contain;
 }
 
