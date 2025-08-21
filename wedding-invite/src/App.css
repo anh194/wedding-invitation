@@ -195,8 +195,8 @@
 
 @media (max-width: 480px) {
   .map {
-    max-width: 600px;
-    max-height: 40px;
+    max-width: 500px;
+    max-height: 30px;
   }
 }
 
@@ -260,8 +260,8 @@
 
 .name-input-container {
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 46%;
+  left: 49%;
   transform: translate(-50%, -50%);
 }
 
@@ -289,11 +289,8 @@
   border: none;
   outline: none;
 
-  position: absolute;
   width: 900px;
   height: 180px;
-  top: 15vh;
-  left: 16vw;
 
   font-size: 16px;
   font-family: 'Pixellari', 'Courier New', monospace;
@@ -301,7 +298,7 @@
   text-align: center;
 }
 
-/* @media (max-width: 768px) {
+/* /* @media (max-width: 768px) {
   .name-input {
     width: 70vw;
     height: 25vw;
@@ -309,15 +306,13 @@
     top: 15vh;
     left: 16vw;
   }
-}
+} */
 
 @media (max-width: 480px) {
   .name-input {
     width: 30vw;
     height: 26vw;
     font-size: 7px;
-    top: 15vh;
-    left: 16vw;
   }
 } */
 
