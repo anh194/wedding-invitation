@@ -176,15 +176,15 @@
 
 @media (max-width: 480px) {
   .map-button-position {
-    top: 49.5%;
-    left: 60.5%;
+    top: 50.5%;
+    left: 63%;
   }
 }
 
 .map {
   cursor: pointer;
-  width: 8vw;
-  height: 6vh;
+  width: 10vw;
+  height: 8vh;
   max-width: 120px;
   max-height: 90px;
   min-width: 30px;
@@ -218,7 +218,7 @@
 @media (max-width: 480px) {
   .button-position-screen-2 {
     top: 55%;
-    left: 60.5%;
+    left: 63.5%;
   }
 }
 
@@ -260,8 +260,8 @@
 
 .name-input-container {
   position: absolute;
-  top: 46%;
-  left: 49%;
+  top: 20%;
+  left: 20%;
   transform: translate(-50%, -50%);
 }
 
@@ -289,8 +289,11 @@
   border: none;
   outline: none;
 
+  position: absolute;
   width: 900px;
   height: 180px;
+  top: 15vh;
+  left: 16vw;
 
   font-size: 16px;
   font-family: 'Pixellari', 'Courier New', monospace;
@@ -298,11 +301,13 @@
   text-align: center;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .name-input {
     width: 70vw;
     height: 25vw;
     font-size: 14px;
+    top: 15vh;
+    left: 16vw;
   }
 }
 
@@ -311,8 +316,10 @@
     width: 30vw;
     height: 26vw;
     font-size: 7px;
+    top: 15vh;
+    left: 16vw;
   }
-}
+} */
 
 .bride-button {
   position: relative;
